@@ -31,6 +31,7 @@ public class Utils {
         map.putDouble("longitude", location.getLongitude());
         map.putDouble("accuracy", location.getAccuracy());
         map.putDouble("altitude", location.getAltitude());
+        /*
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             map.putDouble("altitudeAccuracy", location.getVerticalAccuracyMeters());
         } else {
@@ -48,6 +49,10 @@ public class Utils {
         } else {
             map.putDouble("speedAccuracy", 0.0);
         }
+        */
+        map.putDouble("altitudeAccuracy", 0.0);        
+        map.putDouble("courseAccuracy", 0.0);
+        map.putDouble("speedAccuracy", 0.0);
         map.putDouble("timestamp", location.getTime());
 
         return map;
